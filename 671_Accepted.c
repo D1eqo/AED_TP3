@@ -1,3 +1,8 @@
+/*
+#include<stdlib.h>
+#include<stdio.h>
+*/
+
 int findSecondMinimumValue(struct TreeNode* root){
     int smallest = root->val;
     int secSmallest = -1;
@@ -22,3 +27,24 @@ int findSecondMinimumValue(struct TreeNode* root){
 
     return secSmallest;
 }
+
+/*
+int main() {
+    struct TreeNode* root = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    root->val = 2;
+    root->left = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    root->left->val = 2;
+    root->right = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    root->right->val = 2147483647;
+    root->left->left = NULL;
+    root->left->right = NULL;
+    root->right->left = NULL;
+    root->right->right = NULL;
+    
+    int secSmallest = findSecondMinimumValue(root);
+
+    printf("%d", secSmallest);
+    
+    return 0;
+}
+*/
